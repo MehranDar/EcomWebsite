@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="./../src/output.css" rel="stylesheet" />
+    <title>React App</title>
+    <style>
+      .container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px;
+          justify-content: center;
+      }
+      .product {
+          border: 1px solid #ddd;
+          padding: 10px;
+          width: 180px;
+          text-align: center;
+          border-radius: 8px;
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+          background: #fff;
+      }
+      .product img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 5px;
+      }
+      .product h3 {
+          font-size: 16px;
+          margin: 10px 0;
+      }
+      .product p {
+          font-size: 14px;
+          color: #555;
+      }
+  </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Custom Div Above Navbar -->
+    <div
+    class="w-screen fixed top-0 left-0 z-50 bg-[#333333] text-white text-center py-4 flex flex-row items-center justify-between shadow-md"
+>
+    <div class="flex flex-row gap-4 items-center">
+        <h1 class="text-2xl font-bold pl-7">Mywork</h1>
+        <h2 class="text-3xl bg-[#222222] border-x-2 py- flex items-center ml-4 px-4 h-full">
+            <span>+</span> Fashion
+        </h2>
+    </div>
+    <div class="flex flex-row h-full">
+        <div class="h-full flex items-center px-7 py-3 hover:bg-[#444444] hover:text-yellow-400 transition">
+            🔍
+        </div>
+        <div class="h-full flex items-center px-7 py-3 hover:bg-[#444444] hover:text-yellow-400 transition">
+            ❤️
+        </div>
+        <div class="h-full flex items-center px-7 py-3 hover:bg-[#444444] hover:text-yellow-400 transition">
+            🛒
+        </div>
+        <div class="h-full flex items-center px-7 py-3 hover:bg-[#444444] hover:text-yellow-400 transition">
+            ⚙️
+        </div>
+    </div>
+</div>
+
+<!-- Spacer to prevent content overlap -->
+<div class="h-20"></div>
+    <!-- Div Above Navbar -->
+    <div class="w-full bg-black text-white py-2 flex justify-around px-2">
+      <p class="text-sm">Free shipping, 30-day return or refund guarantee.</p>
+      <div>
+        <ul class="flex flex-row space-x-2 text-sm gap-x-4">
+          <li>Sign in</li>
+          <li>FAQs</li>
+          <li class="relative group cursor-pointer">
+            <button class="focus:outline-none">USD ▼</button>
+            <ul
+              class="absolute hidden group-hover:block bg-white text-black mt-1 py-1 shadow-md"
+            >
+              <li class="px-3 py-1 hover:bg-gray-200">USD</li>
+              <li class="px-3 py-1 hover:bg-gray-200">EUR</li>
+              <li class="px-3 py-1 hover:bg-gray-200">GBP</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Header -->
+    <header
+      class="bg-white text-black py-3 px-6 flex justify-between items-center"
+    >
+      <div class="text-2xl font-bold ml-5 shadow-blue-300">
+        Male Fashion <span class="text-red-600 text-3xl">.</span>
+      </div>
+      <nav class="flex space-x-6">
+        <a href="#" onclick="showSection('Home')"  class="hover:underline hover:text-red-500"
+          >Home</a
+        >
+        <a href="#" onclick="showSection('Shop')" class="hover:underline hover:text-red-500"
+          >Shop</a
+        >
+        <a href="#" onclick="showSection('Pages')" class="hover:underline hover:text-red-500"
+          >Pages</a
+        >
+        <a href="#" onclick="showSection('Blog')" class="hover:underline hover:text-red-500"
+          >Blog</a
+        >
+        <a href="#" onclick="showSection('Contacts')" class="hover:underline hover:text-red-500"
+          >Contacts</a
+        >
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="#" class="hover:underline">Sign In</a>
+        <a href="#" class="hover:underline">FAQs</a>
+        <span>USD ▾</span>
+        <div class="relative">
+          <span
+            class="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 rounded-full"
+            >0</span
+          >
+          🛒
+        </div>
+      </div>
+    </header>
+
+    <!-- !!!!!--------main-content----------!!!!!!!! -->
+    <div class="flex-1 mt-1 text-center">
+      <div id="Home" class="content-section w-full flex flex-col items-center justify-center bg-gray-900 relative">
+        <div class="relative w-full h-screen overflow-hidden">
+            
+            <!-- Image Wrapper -->
+            <div class="relative w-full h-full">
+                <img id="slide1" src="https://images.pexels.com/photos/30723814/pexels-photo-30723814/free-photo-of-stylish-man-posing-in-crocheted-outfit-indoors.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                    class="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out transform translate-x-0 opacity-100">
+                
+                <img id="slide2" src="https://images.pexels.com/photos/30737608/pexels-photo-30737608/free-photo-of-fashionable-man-in-stylish-black-outfit.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                    class="absolute w-full h-full object-cover transition-transform duration-700 ease-in-out transform translate-x-full opacity-0">
+            </div>
+    
+            <!-- Text Content for First Image -->
+            <div id="text1" class="absolute left-10 top-1/3 transform -translate-y-1/2 bg-opacity-50 p-6 text-white rounded-lg max-w-md transition-opacity duration-700 opacity-100">
+                <p class="text-sm p-2 text-red-600 uppercase tracking-wide">Summer Collection</p>
+                <h2 class="text-4xl p-2 font-bold text-black mt-2">FALL WINTER <br> COLLECTION-2025</h2>
+                <p class="text-sm mt-3 p-2 text-black">Lorem ipsum dolor sit. Lorem ipsum dolor sit. <br> Lorem ipsum dolor sit.</p>
+                <button class="mt-5 bg-black hover:bg-gray-500 text-white px-6 py-3 rounded transition">
+                    Shop Now &rarr;
+                </button>
+            </div>
+    
+            <!-- Text Content for Second Image -->
+            <div id="text2" class="absolute left-10 top-1/3 transform -translate-y-1/2 bg-opacity-50 p-6 text-white rounded-lg max-w-md transition-opacity duration-700 opacity-0">
+                <p class="text-sm p-2 text-blue-600 uppercase tracking-wide">Exclusive Offer</p>
+                <h2 class="text-4xl p-2 font-bold text-black mt-2">NEW ARRIVALS <br> 2025 EDITION</h2>
+                <p class="text-sm mt-3 p-2 text-black">Discover the latest trends. <br> Fresh styles just for you.</p>
+                <button class="mt-5 bg-black hover:bg-gray-500 text-white px-6 py-3 rounded transition">
+                    Explore Now &rarr;
+                </button>
+            </div>
+    
+            <!-- Navigation Buttons -->
+            <button onclick="prevSlide()" class="absolute top-1/2 left-4 transform -translate-y-1/2 opacity-25 bg-gray-200 text-red-600 px-4 py-2 rounded hover:bg-gray-600 transition">
+                ❮
+            </button>
+            <button onclick="nextSlide()" class="absolute top-1/2 right-4 transform -translate-y-1/2 opacity-25 bg-gray-200 text-red-600 px-4 py-2 rounded hover:bg-gray-600 transition">
+                ❯
+            </button>
+        </div>
+         <!-- 🔥 Now the red div is placed properly below the slider -->
+         <div class="relative w-full min-h-[200vh]  overflow-hidden bg-white">
+          <!-- Black Div (Top Right Corner) -->
+          <div class="w-90 h-120 text-white flex items-center justify-center  absolute top-15 right-[36vh]">
+             <img src="https://images.pexels.com/photos/30737612/pexels-photo-30737612/free-photo-of-fashionable-man-in-crochet-outfit-posing-in-studio.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""
+             >
+           
+          </div>
+      <div>  
+        <h4 class="relative text-3xl font-serif line tracking-[.15em] font-extrabold top-[30vh] left-[5vh]">Clothing <br> Collections 2030</h4>
+        <button class="relative text-2xl top-[35vh] left-[4vh] antialiased tracking-normal underline-offset-4">
+          Shop Now
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-500 transition-all  duration-2000 ease-in" style="width: 100%;"></span>
+      </button>
+      </div>
+          <!-- Green Div (Below Black, on the Left) -->
+          <div class="w-[100px] h-[90px] flex flex-col items-start absolute top-[70vh] left-[10vh]">
+            <!-- Image -->
+            <img src="https://images.pexels.com/photos/2748239/pexels-photo-2748239.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                 alt="" class="w-full h-full object-cover">
+                 <h4 class="text-3xl font-serif tracking-[.15em] font-extrabold pb-2">Accessories</h4>
+                 <button class="relative mt-2 antialiased tracking-normal underline-offset-4">
+                  Shop Now
+                  <span class="absolute left-0 bottom-0 w-full h-[2px] bg-red-500"></span>
+              </button>
+
+        </div>
+         
+          <!-- Yellow Div (Bottom Right) -->
+          <div class=" w-[500px] h-[500px] flex items-center justify-center absolute bottom-[40vh] right-[20vh]">
+            <img class="w-full h-full object-cover" src="https://images.pexels.com/photos/1335463/pexels-photo-1335463.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+
+    
+          </div>
+          
+     <div>
+      <div class="relative top-[70vh] left-4">  
+        <h4 class="relative text-3xl font-serif  tracking-[.10em] font-extrabold top-[30vh] left-[5vh]">Shoes Spring <br> <span class="tracking-[.em]">2030</span></h4>
+        <button class="relative mb-[-1rem] text-lg top-[32vh] left-[4vh] antialiased  underline-offset-4">
+          Shop Now
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-500 transition-all  duration-2000 ease-in" style="width: 100%;"></span>
+      </button>
+      </div>
+     </div>
+</div>
+<div id="Home" class="content-section bg-white" >
+  <div class="container flex flex-wrap gap-8 p-8 max-w-7xl mx-auto" id="productContainer"></div>
+
+ 
+</div>
+    </div>
+    
+   
+      <div id="Shop" class="content-section hidden">
+        <h1 class="text-3xl font-semibold text-gray-800">Welcome to Shop</h1>
+      </div>
+      <div id="Pages" class="content-section hidden">
+        <h1 class="text-3xl font-semibold text-gray-800">Welcome to pages</h1>
+      </div>
+      <div id="Blog" class="content-section hidden">
+        <h1 class="text-3xl font-semibold text-gray-800">Welcome to blog</h1>
+      </div>
+      <div id="Contacts" class="content-section hidden">
+        <h1 class="text-3xl font-semibold text-gray-800">
+          Welcome to contacts
+        </h1>
+      </div>
+    </div>
+    <script src="work.js"></script>
+  </body>
+</html>
